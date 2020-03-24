@@ -11,6 +11,14 @@ if ($connection->connect_errno) {
     exit();
 } else {
     printf("Connected to the database");
+    $sql = 'INSERT INTO pet (name) VALUES ('mo');
+    
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+    
 }
 $connection->close();
 ?>
